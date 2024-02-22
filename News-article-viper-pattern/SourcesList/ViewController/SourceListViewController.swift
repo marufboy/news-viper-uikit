@@ -23,12 +23,10 @@ class SourceListViewController: DataLoadingViewController {
     }
     
     private func initData() {
-        title   = "News Sources"
+        title   = "Sources"
         setupTableView()
         setupSearchController()
-        if let categoryItemName = category.name {
-            presenter.fetchSource(source: categoryItemName)
-        }
+        presenter.fetchSource(source: category.name)
     }
     
     func setupTableView() {
@@ -95,14 +93,14 @@ extension SourceListViewController: UISearchResultsUpdating, UISearchBarDelegate
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         presenter.removeFilterSourceArray()
-        presenter.fetchSource(source: category.name ?? "")
+        presenter.fetchSource(source: category.name)
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         guard let isEmpty =  searchController.searchBar.text?.isEmpty else { return }
         if isEmpty {
             presenter.removeFilterSourceArray()
-            presenter.fetchSource(source: category.name ?? "")
+            presenter.fetchSource(source: category.name)
         }
     }
     

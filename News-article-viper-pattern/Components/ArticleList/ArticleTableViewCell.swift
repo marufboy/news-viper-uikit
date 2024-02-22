@@ -9,9 +9,15 @@ import UIKit
 
 class ArticleTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var articleView: UIView!
+    @IBOutlet weak var articleImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        articleView.layer.cornerRadius  = 8.0
+        articleView.clipsToBounds       = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -20,4 +26,12 @@ class ArticleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func set(article: ArticleEntity) {
+        articleImageView.load(from: article.urlToImage ?? "")
+        articleImageView.contentMode = .scaleAspectFill
+//        articleImageView.frame = articleView.bounds
+//        articleImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        titleLabel.text     = article.title
+        authorLabel.text    = article.author
+    }
 }

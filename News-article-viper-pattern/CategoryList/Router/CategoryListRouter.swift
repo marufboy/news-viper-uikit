@@ -28,7 +28,7 @@ class CategoryListRouter: CategoryRouterProtocol {
         presenter.router        = router
         
         //MARK: passing data category
-        sourceVC.category = category
+        sourceVC.category       = category
         
         viewController.navigationController?.pushViewController(sourceVC, animated: true)
     }
