@@ -11,8 +11,8 @@ class SourceTableViewCell: UITableViewCell {
 
     @IBOutlet weak var sourceView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

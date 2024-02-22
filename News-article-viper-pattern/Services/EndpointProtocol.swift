@@ -20,9 +20,9 @@ enum Endpoint{
     var url: URL {
         switch self {
         case let .getNewsSourcesFromCategory(category):
-            return .createEndpointURL("top-headlines/sources?category=\(category)&apiKey=\(APIKey)")
+            return .createEndpointURL("top-headlines/sources?category=\(category)&language=en&apiKey=\(APIKey)")
         case let .getNewsArticlesFromSource(source, page):
-            return .createEndpointURL("top-headlines?sources=\(source)&page=\(page)&apiKey=\(APIKey)")
+            return .createEndpointURL("top-headlines?sources=\(source)&page=\(page)&language=en&apiKey=\(APIKey)")
         }
     }
 }

@@ -31,7 +31,6 @@ class NetworkManager: DataFetch {
             switch response.statusCode {
             case 200:
                 if let decode = self.decode(jsonData: SourcesResponse.self, from: data) {
-                    print(decode.sources)
                     completion(.success(decode.sources))
                 }
             case 400:

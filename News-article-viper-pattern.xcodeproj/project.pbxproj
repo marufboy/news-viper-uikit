@@ -43,6 +43,7 @@
 		2399201C2B872D330070D6F4 /* SourceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2399201A2B872D330070D6F4 /* SourceTableViewCell.xib */; };
 		239920202B8734860070D6F4 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399201E2B8734860070D6F4 /* ArticleTableViewCell.swift */; };
 		239920212B8734860070D6F4 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2399201F2B8734860070D6F4 /* ArticleTableViewCell.xib */; };
+		239920252B87887C0070D6F4 /* DataLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239920242B87887C0070D6F4 /* DataLoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		2399201A2B872D330070D6F4 /* SourceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceTableViewCell.xib; sourceTree = "<group>"; };
 		2399201E2B8734860070D6F4 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		2399201F2B8734860070D6F4 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		239920242B87887C0070D6F4 /* DataLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,11 +224,11 @@
 			isa = PBXGroup;
 			children = (
 				239920062B86F53A0070D6F4 /* Core */,
+				239920262B8799340070D6F4 /* ViewController */,
+				239920272B87993F0070D6F4 /* Interactor */,
+				239920282B8799530070D6F4 /* Presenter */,
 				23991FDC2B86CE400070D6F4 /* Entity */,
-				2399200E2B8727050070D6F4 /* SourceListViewController.swift */,
-				239920102B8727500070D6F4 /* SourceListPresenter.swift */,
-				239920122B87277F0070D6F4 /* SourceListInteractor.swift */,
-				239920142B8727BF0070D6F4 /* SourceListRouter.swift */,
+				239920292B8799600070D6F4 /* Router */,
 			);
 			path = SourcesList;
 			sourceTree = "<group>";
@@ -279,6 +281,7 @@
 				2399201D2B87346C0070D6F4 /* ArticleList */,
 				239920182B872CD30070D6F4 /* SourceList */,
 				23991FEE2B86D91B0070D6F4 /* CategoryList */,
+				239920242B87887C0070D6F4 /* DataLoadingViewController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -366,6 +369,38 @@
 				2399201F2B8734860070D6F4 /* ArticleTableViewCell.xib */,
 			);
 			path = ArticleList;
+			sourceTree = "<group>";
+		};
+		239920262B8799340070D6F4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2399200E2B8727050070D6F4 /* SourceListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		239920272B87993F0070D6F4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				239920122B87277F0070D6F4 /* SourceListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		239920282B8799530070D6F4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				239920102B8727500070D6F4 /* SourceListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		239920292B8799600070D6F4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				239920142B8727BF0070D6F4 /* SourceListRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,6 +563,7 @@
 				23991FF12B86D98C0070D6F4 /* CategoryTableViewCell.swift in Sources */,
 				23991FF92B86E0EC0070D6F4 /* CategoryListRouter.swift in Sources */,
 				23991FE12B86CE6C0070D6F4 /* ArticleEntity.swift in Sources */,
+				239920252B87887C0070D6F4 /* DataLoadingViewController.swift in Sources */,
 				2399201B2B872D330070D6F4 /* SourceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,67 +11,73 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="140" id="KGk-i7-Jjw" customClass="SourceTableViewCell" customModule="News_article_viper_pattern" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="415" height="140"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="KGk-i7-Jjw" customClass="SourceTableViewCell" customModule="News_article_viper_pattern" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="102"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="415" height="140"/>
+                <rect key="frame" x="0.0" y="0.0" width="415" height="102"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUm-ks-C7x">
-                        <rect key="frame" x="20" y="10" width="375" height="120"/>
+                        <rect key="frame" x="8" y="8" width="399" height="86"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHl-pO-AzG">
-                                <rect key="frame" x="8" y="7" width="359" height="21"/>
+                                <rect key="frame" x="8" y="4" width="383" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="hxh-xw-OSE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zk-Iu-8Mn">
-                                <rect key="frame" x="8" y="57" width="359" height="46.333333333333343"/>
-                                <string key="text">Video released by the Raleigh Police Department shows the arrest of Darryl Williams, who was shocked three times with a Taser and later died. WRAL’s Chelsea</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="business" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgF-aA-drJ">
-                                <rect key="frame" x="8" y="33" width="359" height="16"/>
+                                <rect key="frame" x="8" y="32" width="383" height="15.666666666666664"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medical news and health news headlines posted throughout the day, every day." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zk-Iu-8Mn">
+                                <rect key="frame" x="8" y="47.666666666666657" width="383" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="YYb-xv-6lf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemFillColor"/>
                         <constraints>
-                            <constraint firstItem="DgF-aA-drJ" firstAttribute="leading" secondItem="GUm-ks-C7x" secondAttribute="leading" constant="8" id="3Ie-LV-dST"/>
-                            <constraint firstItem="oHl-pO-AzG" firstAttribute="top" secondItem="GUm-ks-C7x" secondAttribute="top" constant="7" id="6g2-ob-fJw"/>
-                            <constraint firstItem="8zk-Iu-8Mn" firstAttribute="leading" secondItem="GUm-ks-C7x" secondAttribute="leading" constant="8" id="Fu7-ot-5Md"/>
-                            <constraint firstAttribute="trailing" secondItem="oHl-pO-AzG" secondAttribute="trailing" constant="8" id="LNd-BV-XxP"/>
-                            <constraint firstAttribute="trailing" secondItem="8zk-Iu-8Mn" secondAttribute="trailing" constant="8" id="MAc-8U-57Q"/>
-                            <constraint firstAttribute="trailing" secondItem="DgF-aA-drJ" secondAttribute="trailing" constant="8" id="MED-Al-Cyx"/>
-                            <constraint firstItem="oHl-pO-AzG" firstAttribute="leading" secondItem="GUm-ks-C7x" secondAttribute="leading" constant="8" id="kkx-ZO-IuD"/>
-                            <constraint firstItem="8zk-Iu-8Mn" firstAttribute="top" secondItem="DgF-aA-drJ" secondAttribute="bottom" constant="8" id="lK6-f9-Z5m"/>
-                            <constraint firstItem="DgF-aA-drJ" firstAttribute="top" secondItem="oHl-pO-AzG" secondAttribute="bottom" constant="5" id="rws-KU-pQg"/>
+                            <constraint firstItem="DgF-aA-drJ" firstAttribute="leading" secondItem="GUm-ks-C7x" secondAttribute="leading" constant="8" id="3OR-Ov-P6h"/>
+                            <constraint firstItem="8zk-Iu-8Mn" firstAttribute="top" secondItem="DgF-aA-drJ" secondAttribute="bottom" id="AJ4-3N-FzT"/>
+                            <constraint firstAttribute="trailing" secondItem="8zk-Iu-8Mn" secondAttribute="trailing" constant="8" id="SUw-1T-Pvw"/>
+                            <constraint firstAttribute="trailing" secondItem="DgF-aA-drJ" secondAttribute="trailing" constant="8" id="Ymr-8O-dvB"/>
+                            <constraint firstItem="oHl-pO-AzG" firstAttribute="top" secondItem="GUm-ks-C7x" secondAttribute="top" constant="4" id="cil-z3-wLD"/>
+                            <constraint firstItem="8zk-Iu-8Mn" firstAttribute="leading" secondItem="GUm-ks-C7x" secondAttribute="leading" constant="8" id="dGu-IX-NWY"/>
+                            <constraint firstItem="DgF-aA-drJ" firstAttribute="top" secondItem="oHl-pO-AzG" secondAttribute="bottom" constant="8" id="fuF-de-qrA"/>
+                            <constraint firstItem="DgF-aA-drJ" firstAttribute="top" secondItem="oHl-pO-AzG" secondAttribute="bottom" constant="8" id="gmr-R6-rkt"/>
+                            <constraint firstAttribute="trailing" secondItem="oHl-pO-AzG" secondAttribute="trailing" constant="8" id="hcA-5l-aMk"/>
+                            <constraint firstAttribute="bottom" secondItem="8zk-Iu-8Mn" secondAttribute="bottom" constant="-4.6666666666666714" id="iHs-1S-qy1"/>
+                            <constraint firstItem="8zk-Iu-8Mn" firstAttribute="top" secondItem="DgF-aA-drJ" secondAttribute="bottom" id="kZw-zg-QWq"/>
+                            <constraint firstItem="oHl-pO-AzG" firstAttribute="leading" secondItem="GUm-ks-C7x" secondAttribute="leading" constant="8" id="n8z-n1-Pvh"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="GUm-ks-C7x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="1OJ-bD-W1d"/>
-                    <constraint firstAttribute="bottom" secondItem="GUm-ks-C7x" secondAttribute="bottom" constant="10" id="AzT-sL-tiV"/>
-                    <constraint firstItem="GUm-ks-C7x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="C7Z-9k-vQq"/>
-                    <constraint firstAttribute="trailing" secondItem="GUm-ks-C7x" secondAttribute="trailing" constant="20" id="FXu-xp-xkK"/>
+                    <constraint firstItem="GUm-ks-C7x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="iGb-OV-VUR"/>
+                    <constraint firstItem="GUm-ks-C7x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="l5y-Do-kFk"/>
+                    <constraint firstAttribute="bottom" secondItem="GUm-ks-C7x" secondAttribute="bottom" constant="8" id="qP1-vs-fav"/>
+                    <constraint firstAttribute="trailing" secondItem="GUm-ks-C7x" secondAttribute="trailing" constant="8" id="yXj-eM-tfI"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="categoryLabel" destination="DgF-aA-drJ" id="ykc-fK-XpV"/>
-                <outlet property="descLabel" destination="8zk-Iu-8Mn" id="NXA-bt-qrN"/>
-                <outlet property="sourceVIew" destination="GUm-ks-C7x" id="TmO-81-H1x"/>
-                <outlet property="sourceView" destination="GUm-ks-C7x" id="mZe-BW-GYV"/>
-                <outlet property="titleLabel" destination="oHl-pO-AzG" id="2mM-yD-KCq"/>
-                <outlet property="uiView" destination="GUm-ks-C7x" id="7PW-14-P4E"/>
+                <outlet property="categoryLabel" destination="DgF-aA-drJ" id="KLr-AJ-5u1"/>
+                <outlet property="descLabel" destination="8zk-Iu-8Mn" id="mSg-Oo-LQt"/>
+                <outlet property="sourceView" destination="GUm-ks-C7x" id="WjV-Ju-F95"/>
+                <outlet property="titleLabel" destination="oHl-pO-AzG" id="C9F-ma-HkA"/>
             </connections>
-            <point key="canvasLocation" x="208.3969465648855" y="53.521126760563384"/>
+            <point key="canvasLocation" x="208.3969465648855" y="3.5211267605633805"/>
         </tableViewCell>
     </objects>
     <resources>

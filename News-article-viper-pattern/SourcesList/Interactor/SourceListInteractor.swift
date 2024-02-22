@@ -18,9 +18,11 @@ class SourceListInteractor: SourceInteractorProtocol {
     private let service = NetworkManager(service: NetworkHelper())
     
     func fetchSource(with category: String) {
+        presenter.displayLoading()
         DispatchQueue.main.async {
             self.service.getSource(endpoint: .getNewsSourcesFromCategory(category)) { [weak self] result in
                 guard let self = self else { return }
+                presenter.dismissDisplayLoading()
                 switch result {
                 case .success(let sources):
                     self.sources = sources

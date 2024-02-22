@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SourceListViewController: ViewController {
+class SourceListViewController: DataLoadingViewController {
 
     var tableView: UITableView!
     let searchController  = UISearchController()
@@ -19,8 +19,7 @@ class SourceListViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initData()
     }
     
     private func initData() {
@@ -33,10 +32,11 @@ class SourceListViewController: ViewController {
     }
     
     func setupTableView() {
-        view.addSubview(tableView)
         tableView               = UITableView(frame: view.bounds)
+        view.addSubview(tableView)
         tableView.delegate      = self
         tableView.dataSource    = self
+        tableView.separatorStyle = .none
         tableView.registerCell(type: SourceTableViewCell.self, identifier: SourceTableViewCell.identifier)
     }
     
@@ -51,7 +51,6 @@ class SourceListViewController: ViewController {
 
 extension SourceListViewController: SourceViewProtocol {
     func reloadSourceData() {
-        dismissLoadingView()
         tableView.reloadData()
     }
     
@@ -86,7 +85,6 @@ extension SourceListViewController: UITableViewDelegate, UITableViewDataSource {
         presenter.pushToArticleList(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
 }
 
 extension SourceListViewController: UISearchResultsUpdating, UISearchBarDelegate {
@@ -96,7 +94,6 @@ extension SourceListViewController: UISearchResultsUpdating, UISearchBarDelegate
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        showLoadingIndicator()
         presenter.removeFilterSourceArray()
         presenter.fetchSource(source: category.name ?? "")
     }
