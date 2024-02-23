@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ArticleTableViewCell: UITableViewCell {
 
@@ -13,6 +14,8 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
+    
+    let placeholderImage = UIImage(resource: .placeholder)
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,10 +30,15 @@ class ArticleTableViewCell: UITableViewCell {
     }
     
     func set(article: ArticleEntity) {
-        articleImageView.load(from: article.urlToImage ?? "")
+        articleImageView.kf.setImage(
+            with: URL(string: article.urlToImage ?? ""),
+            placeholder: placeholderImage,
+            options: [
+                .transition(.fade(0.2)),
+                .cacheOriginalImage
+            ]
+        )
         articleImageView.contentMode = .scaleAspectFill
-//        articleImageView.frame = articleView.bounds
-//        articleImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         titleLabel.text     = article.title
         authorLabel.text    = article.author
     }
