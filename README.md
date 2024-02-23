@@ -18,15 +18,11 @@ Once the project is running, you can explore the following functionalities:
 - Choose a news source to view articles from that source.
 - Search for articles by keywords within the selected news source.
 - View detailed article content in a web view.
-
-## VIPER Design Pattern
-This project follows the VIPER design pattern, which stands for View, Interactor, Presenter, Entity, and Router. Each component has its responsibility, making the codebase modular and easy to maintain.
-
-- **View:** Responsible for displaying UI and sending user actions to the Presenter.
-- **Interactor:** Handles business logic and communicates with data sources.
-- **Presenter:** Acts as an intermediary between View and Interactor, processes data, and updates the UI.
-- **Entity:** Represents data objects used by the Interactor.
-- **Router:** Handles navigation between different modules.
+  
+## Tech Stack
+1. UIKit Xib
+2. WebKit
+3. Kingfisher
 
 ## Screenshots
 <p float="left">
